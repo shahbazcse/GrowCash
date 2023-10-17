@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Courgette&family=Montserrat:wght@300&family=Nunito+Sans:ital@1&family=Poppins:wght@500&family=Raleway:wght@600&family=Roboto&display=swap");
+
+:root {
+  --mont: "Montserrat";
+  --barlow: "Barlow Condensed";
+  --poppins: "Poppins";
+  --raleway: "Raleway";
+  --roboto: "Roboto";
+}
