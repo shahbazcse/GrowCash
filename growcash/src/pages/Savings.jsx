@@ -34,9 +34,10 @@ function Savings() {
     );
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+    savings &&
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
   }, []);
 
   return (

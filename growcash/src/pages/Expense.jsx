@@ -34,7 +34,7 @@ function Expense() {
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    expenses && setTimeout(() => {
       setLoading(false);
     }, 1000);
   }, []);

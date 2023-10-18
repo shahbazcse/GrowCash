@@ -33,9 +33,10 @@ function Income() {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+    income &&
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
   }, []);
 
   return (
