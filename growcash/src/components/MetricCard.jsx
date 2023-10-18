@@ -9,7 +9,7 @@ function MetricCard({ label, type, value, bannerImg }) {
         style={{ backgroundImage: `url(${bannerImg})` }}
         className="bg-[length:22vh_30vh] bg-center bg-end bg-no-repeat h-full w-full"
       ></div>
-      <div className="flex flex-col gap-3 w-full bg-[#BEADFA] px-4 py-4 backdrop-blur-xl rounded-b-xl">
+      <div className="flex flex-col gap-3 w-full bg-[#BEADFA] px-4 py-4 backdrop-blur-xl rounded-b-lg">
         <h1 className="text-[2rem]">
           {type === "revenue" && "$"}
           ${value | 0}{" "}
