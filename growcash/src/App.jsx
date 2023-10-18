@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <div className="flex h-screen font-[roboto]">
         <NavBar />
-        <div className="bg-blue-100 tracking-wide w-[85%] overflow-auto">
+        <div className="bg-[#DFCCFB] tracking-wide w-[85%] overflow-auto">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/income" element={<Income />} />

@@ -32,15 +32,14 @@ function Dashboard() {
       </div>
       <div className="flex flex-col gap-6 items-center justify-center">
         <div className="mx-[12vh] text-lg">
-          Welcome to your dashboard, where you can get a quick snapshot of your
-          business's vital statistics. Currently, your total stock on hand is
-          displayed, giving you an immediate view of available inventory. Total
-          sales to date provide an overview of your business activity, while
-          total revenue generated tells you the financial impact. For a quick
-          reference on the latest activity, we've included the date of your most
-          recent sale, ensuring you're always up-to-date. With these key metrics
-          at your fingertips, you're empowered to make informed decisions, plan
-          for the future, and keep your business on track.
+          Welcome to GrowCash, your all-in-one financial companion. Our
+          dashboard offers powerful tools for Income Management, Expense
+          Tracking, Savings Planning, and Detailed Reports, all designed to put
+          you in control of your finances. The dashboard offers real-time income
+          summaries, helping you understand your earnings at a glance, insights
+          into your spending habits, empowering you to make informed financial
+          decisions, helps you understand monthly and yearly spending trends, track
+          income growth, and get a clear picture of your net worth.
         </div>
         <div className="flex flex-wrap items-center justify-center my-12 mx-48 gap-12">
           <MetricCard
@@ -64,7 +63,7 @@ function Dashboard() {
           <MetricCard
             label={"Average Monthly Savings"}
             type={"currentMonthSavings"}
-            value={getTotalSavings(savings) / savings.length}
+            value={(getTotalSavings(savings) / savings.length).toFixed(2)}
             bannerImg={img4}
           />
         </div>

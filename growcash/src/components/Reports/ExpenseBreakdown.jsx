@@ -8,7 +8,7 @@ function ExpenseBreakdown() {
     <div className="flex flex-col justify-center items-center gap-8">
       <h1 className="text-2xl font-bold">Expense Breakdown</h1>
       <div className="flex justify-center items-center gap-14">
-        <table className="bg-blue-300 rounded-md w-[56vh] text-left">
+        <table className="bg-[#64CCC5] rounded-md w-[56vh] text-left">
           <thead>
             <tr>
               <th className="px-4 py-2 border-r border-b">#</th>

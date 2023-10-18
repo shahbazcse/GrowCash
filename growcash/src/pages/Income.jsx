@@ -40,19 +40,19 @@ function Income() {
       </div>
       <div className="flex flex-col gap-10 items-center justify-center">
         <div className="mx-[12vh] text-lg">
-          Effortlessly control your inventory with our intuitive system. Our
-          user-friendly inventory module allows you to maintain a detailed list
-          of all your items. It provides essential features, such as adding new
-          items, updating existing ones, and even deleting items that are no
-          longer needed. Each item in your inventory is meticulously cataloged,
-          featuring crucial details like item name, category, quantity, and
-          more.
+          Income Management lets you take charge of your financial well-being
+          with ease. Our user-friendly platform offers a seamless experience for
+          managing your income. The "Add Entry" feature allows you to
+          effortlessly record all your earnings, whether it's your salary,
+          investments, or any other source. Simply input the details such as
+          source, date, and category, and watch your income data seamlessly
+          integrate into your financial profile.
         </div>
         <div className="flex flex-col px-4">
           <div className="flex items-center gap-6 ml-[3rem] mb-4 text-center mx-auto">
             <div
               onClick={() => setOpenModal(true)}
-              className="flex items-center justify-center gap-1 bg-[#64CCC5] hover:bg-[#3eb8af] text-center mx-auto pl-3 pr-1 py-3 rounded-xl drop-shadow-md cursor-pointer font-bold"
+              className="flex items-center justify-center gap-1 bg-[#BEADFA] hover:bg-[#b697e9] text-center mx-auto pl-3 pr-1 py-3 rounded-xl drop-shadow-md cursor-pointer font-bold"
             >
               Add Entry
               <BiPlus className="h-6 w-6" />
@@ -111,7 +111,7 @@ function Income() {
           {filteredIncome.map((entry, index) => (
             <IncomeCard key={index} serial={index + 1} entry={entry} />
           ))}
-          <div className="my-6 mx-auto px-12 py-4 drop-shadow-md rounded-md bg-blue-300 font-bold text-xl">
+          <div className="my-6 mx-auto px-12 py-4 drop-shadow-md rounded-md bg-[#BEADFA] font-bold text-xl">
             Total Income: ${getTotalIncome(income)}
           </div>
         </div>

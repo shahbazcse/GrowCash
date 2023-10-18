@@ -15,7 +15,7 @@ const IncomeVsExpensesReport = () => {
       <div className="flex justify-center items-center gap-14">
         <div className="flex flex-col items-center gap-3">
           <div className="font-bold text-xl">INCOME</div>
-          <table className="bg-blue-300 rounded-md w-[56vh] text-left">
+          <table className="bg-[#BEADFA] rounded-md w-[56vh] text-left">
             <thead>
               <tr>
                 <th className="px-4 py-2 border-r border-b">#</th>
@@ -40,7 +40,7 @@ const IncomeVsExpensesReport = () => {
         </div>
         <div className="flex flex-col items-center gap-3">
           <div className="font-bold text-xl">EXPENSES</div>
-          <table className="bg-blue-300 rounded-md w-[56vh] text-left">
+          <table className="bg-[#64CCC5] rounded-md w-[56vh] text-left">
             <thead>
               <tr>
                 <th className="px-4 py-2 border-r border-b">#</th>
@@ -64,7 +64,7 @@ const IncomeVsExpensesReport = () => {
           </table>
         </div>
       </div>
-      <table className="bg-blue-300 rounded-lg">
+      <table className="bg-[#BEADFA] rounded-lg">
         <tbody>
           <tr>
             <td className="px-6 py-3  border font-bold">Total Income:</td>

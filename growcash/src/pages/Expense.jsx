@@ -41,13 +41,13 @@ function Expense() {
       </div>
       <div className="flex flex-col gap-10 items-center justify-center">
         <div className="mx-[12vh] text-lg">
-          Experience seamless sales management with our advanced system. Our
-          sales module not only keeps track of all your sales but also allows
-          you to add new sales with ease. It enables you to filter sales based
-          on a specified date range, providing you with a clear view of your
-          sales history. Whether you're analyzing recent performance or checking
-          sales trends, our system equips you with the tools to make data-driven
-          decisions.
+          Expense Management is a dedicated space to efficiently oversee your
+          spending. Our user-friendly platform empowers you to stay in control
+          of your financial journey. The "Add Entry" feature simplifies
+          the process of logging your expenditures, whether they're daily
+          expenses or recurring bills. Easily input the details such as the
+          expense source, date, and category, and witness your spending data
+          integrate seamlessly into your financial record.
         </div>
         <div className="flex flex-col justify-center items-center mb-4 px-4">
           <div className="flex items-center gap-6 ml-[3rem] mb-4 text-center mx-auto">
@@ -109,7 +109,7 @@ function Expense() {
           {filteredExpense.map((entry, index) => (
             <ExpenseCard key={index} serial={index + 1} entry={entry} />
           ))}
-          <div className="my-6 mx-auto px-12 py-4 drop-shadow-md rounded-md bg-blue-300 font-bold text-xl">
+          <div className="my-6 mx-auto px-12 py-4 drop-shadow-md rounded-md bg-[#64CCC5] font-bold text-xl">
             Total Expense: ${getTotalExpense(expenses)}
           </div>
         </div>

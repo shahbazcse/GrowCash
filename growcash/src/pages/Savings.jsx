@@ -41,19 +41,21 @@ function Savings() {
       </div>
       <div className="flex flex-col gap-10 items-center justify-center">
         <div className="mx-[12vh] text-lg">
-          Experience seamless sales management with our advanced system. Our
-          sales module not only keeps track of all your sales but also allows
-          you to add new sales with ease. It enables you to filter sales based
-          on a specified date range, providing you with a clear view of your
-          sales history. Whether you're analyzing recent performance or checking
-          sales trends, our system equips you with the tools to make data-driven
-          decisions.
+          Savings Management is a dedicated hub for achieving your financial
+          aspirations with ease. Our platform is designed to empower you in your
+          journey towards a secure financial future. The "Add Entry" feature
+          makes saving straightforward and hassle-free. Whether it's setting
+          aside funds for an emergency, a vacation, or retirement, our app
+          allows you to input your savings details, such as the goal, date, and
+          category, with simplicity and precision. Watch as your savings
+          objectives seamlessly integrate into your financial profile, keeping
+          you on track.
         </div>
         <div className="flex flex-col mb-4 px-4">
           <div className="flex items-center gap-6 ml-[3rem] mb-4 text-center mx-auto">
             <div
               onClick={() => setOpenModal(true)}
-              className="flex items-center justify-center gap-1 bg-[#64CCC5] hover:bg-[#3eb8af] text-center mx-auto pl-3 pr-1 py-3 rounded-xl drop-shadow-md cursor-pointer font-bold"
+              className="flex items-center justify-center gap-1 bg-blue-300 hover:bg-blue-400 text-center mx-auto pl-3 pr-1 py-3 rounded-xl drop-shadow-md cursor-pointer font-bold"
             >
               Add Entry
               <BiPlus className="h-6 w-6" />

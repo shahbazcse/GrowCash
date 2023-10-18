@@ -39,21 +39,21 @@ export default function Modal({ setOpenModal, action, formType, item }) {
             <IncomeForm
               action={action}
               setOpenModal={setOpenModal}
-              btnStyle={"bg-[#64CCC5] hover:bg-[#3eb8af]"}
+              btnStyle={"bg-[#BEADFA] hover:bg-[#b697e9]"}
             />
           ) : formType === "Expense" ? (
             <ExpenseForm
               item={item}
               action={action}
               setOpenModal={setOpenModal}
-              btnStyle={"bg-blue-200 hover:bg-blue-300"}
+              btnStyle={"bg-[#64CCC5] hover:bg-[#3eb8af]"}
             />
           ) : (
             formType === "Savings" && (
               <SavingForm
                 action={action}
                 setOpenModal={setOpenModal}
-                btnStyle={"bg-[#64CCC5] hover:bg-[#3eb8af]"}
+                btnStyle={"bg-blue-300 hover:bg-blue-400"}
               />
             )
           )}
