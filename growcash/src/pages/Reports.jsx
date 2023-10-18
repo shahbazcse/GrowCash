@@ -9,6 +9,7 @@ function Reports() {
   const dispatch = useDispatch();
   const [reportType, setReportType] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showReport, setShowReport] = useState(false);
 
   useEffect(() => {}, [dispatch]);
 
@@ -32,7 +33,7 @@ function Reports() {
           <div className="flex flex-col gap-20">
             <select
               onChange={(e) => {
-                setLoading(true);
+                setShowReport(false);
                 setReportType(e.target.value);
               }}
               className="pl-2 py-3 rounded-full drop-shadow-md border text-lg"
@@ -41,25 +42,28 @@ function Reports() {
               <option value="IncomeVSExpenses">Income Vs Expenses</option>
               <option value="ExpenseBreakdown">Expense Breakdown</option>
             </select>
-            <div
+            <button
+              disabled={reportType === "" | showReport}
               onClick={() => {
+                setLoading(true);
                 setTimeout(() => {
                   setLoading(false);
+                  setShowReport(true);
                 }, 1000);
               }}
               className={`flex items-center justify-center gap-1 bg-[#BEADFA] hover:bg-[#b697e9] mb-4 text-center mx-auto px-4 py-3 rounded-xl drop-shadow-md cursor-pointer font-bold`}
             >
               Generate Report
               <AiOutlineReload className="h-6 w-6 ml-1" />
-            </div>
+            </button>
           </div>
           <div className="mt-4">
-            {!loading && reportType === "" ? (
+            {!loading && !showReport ? (
               <p className="mt-[4vh] font-bold text-xl">
                 Please Choose To Generate A Report
               </p>
             ) : (
-              loading && reportType !== "" && (
+              loading && (
                 <div className="mt-16">
                   <Oval
                     height={80}
@@ -76,10 +80,10 @@ function Reports() {
                 </div>
               )
             )}
-            {!loading && reportType === "IncomeVSExpenses" && (
+            {showReport && reportType === "IncomeVSExpenses" && (
               <IncomeVsExpensesReport />
             )}
-            {!loading && reportType === "ExpenseBreakdown" && (
+            {showReport && reportType === "ExpenseBreakdown" && (
               <ExpenseBreakdown />
             )}
           </div>
