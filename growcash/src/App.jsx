@@ -1,5 +1,7 @@
 import "./App.css";
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import NavBar from "./components/NavBar";
 
@@ -8,8 +10,17 @@ import Income from "./pages/Income";
 import Expense from "./pages/Expense";
 import Savings from "./pages/Savings";
 import Reports from "./pages/Reports";
+import { fetchIncome } from "./services/IncomeService";
+import { fetchExpenses } from "./services/ExpenseService";
+import { fetchSavings } from "./services/SavingsService";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchIncome());
+    dispatch(fetchExpenses());
+    dispatch(fetchSavings());
+  }, [dispatch]);
   return (
     <div className="App">
       <div className="flex h-screen font-[roboto]">

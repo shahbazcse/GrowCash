@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import IncomeVsExpensesReport from "../components/Reports/IncomeVsExpensesReport";
 import ExpenseBreakdown from "../components/Reports/ExpenseBreakdown";
 import { AiOutlineReload } from "react-icons/ai";
 import { Oval } from "react-loader-spinner";
-import { useDispatch } from "react-redux";
 
 function Reports() {
-  const dispatch = useDispatch();
   const [reportType, setReportType] = useState("");
   const [loading, setLoading] = useState(false);
   const [showReport, setShowReport] = useState(false);
-
-  useEffect(() => {}, [dispatch]);
 
   return (
     <div className="flex flex-col gap-6 mx-12 my-8">
@@ -43,7 +39,7 @@ function Reports() {
               <option value="ExpenseBreakdown">Expense Breakdown</option>
             </select>
             <button
-              disabled={reportType === "" | showReport}
+              disabled={(reportType === "") | showReport}
               onClick={() => {
                 setLoading(true);
                 setTimeout(() => {
