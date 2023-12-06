@@ -24,7 +24,7 @@ function App() {
   }, [dispatch]);
   return (
     <div className="App">
-      <div className="block xl:hidden">
+      <div className="block xl:hidden h-screen">
         <NonDesktopPage />
       </div>
       <div className="hidden xl:flex h-screen font-[roboto]">
