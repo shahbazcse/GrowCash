@@ -13,6 +13,7 @@ import Reports from "./pages/Reports";
 import { fetchIncome } from "./services/IncomeService";
 import { fetchExpenses } from "./services/ExpenseService";
 import { fetchSavings } from "./services/SavingsService";
+import NonDesktopPage from "./components/NonDesktopPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,7 +24,10 @@ function App() {
   }, [dispatch]);
   return (
     <div className="App">
-      <div className="flex h-screen font-[roboto]">
+      <div className="block xl:hidden">
+        <NonDesktopPage />
+      </div>
+      <div className="hidden xl:flex h-screen font-[roboto]">
         <NavBar />
         <div className="bg-[#DFCCFB] tracking-wide w-[85%] overflow-auto">
           <Routes>
