@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = "https://growcashbackend.shahbazahmad12.repl.co";
+const api = "https://grow-cash-backend.vercel.app";
 
 export const fetchExpenses = () => async (dispatch) => {
   try {
